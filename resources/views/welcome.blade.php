@@ -14,8 +14,8 @@
             You need to enable JavaScript to run this app.
         </noscript>
 
-        <div data-store="{{ $data }}"></div>
-        <div data-years="{{ $years }}"></div>
+        <div id="store" data-store="{{ $data }}"></div>
+        <div id="years" data-years="{{ $years }}"></div>
         <div id="app"></div>
 
     <script src="{{ mix('js/app.js') }}"></script>
