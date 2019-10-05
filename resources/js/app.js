@@ -1,20 +1,17 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import Categories from './components/Categories'
+import Circles from './components/Circles'
+import Years from './components/Years'
 
 const App = () => (
     <div className="container">
-        <div className="row justify-content-center">
-            <div className="col-md-8">
-                <div className="card">
-                    <div className="card-header">Example Component</div>
-
-                    <div className="card-body">I'm an example component!</div>
-                </div>
-            </div>
-        </div>
+        <Categories/>
+        <Circles/>
+        <Years/>
     </div>
 )
 
 if (document.getElementById('app')) {
-    ReactDOM.render(<App />, document.getElementById('app'));
+    ReactDOM.render(<App />, document.getElementById('app'))
 }
