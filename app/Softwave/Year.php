@@ -25,6 +25,6 @@ class Year extends Model
      */
     public function categories()
     {
-        return $this->hasMany('App\Softwave\Circle');
+        return $this->hasMany('App\Softwave\Category');
     }
 }

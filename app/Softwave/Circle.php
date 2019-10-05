@@ -13,7 +13,7 @@ class Circle extends Model
      *
      * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
      */
-    public function year ()
+    public function year()
     {
         return $this->belongsTo('App\Softwave\Year');
     }

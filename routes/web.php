@@ -12,5 +12,8 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    $api = new \App\Http\Controllers\Softwave\ApiController();
+    $data = $api->getYearData(env('YEAR_DEFAULT'));
+
+    return view('welcome', compact('data'));
 });

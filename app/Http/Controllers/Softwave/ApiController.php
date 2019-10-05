@@ -4,7 +4,6 @@ namespace App\Http\Controllers\Softwave;
 
 use App\Http\Controllers\Controller;
 use App\Softwave\Year;
-use Illuminate\Http\Request;
 
 class ApiController extends Controller
 {
@@ -16,8 +15,13 @@ class ApiController extends Controller
      */
     public function getYearData($year)
     {
-        $yearData = Year::where('year', $year)->get();
+        $yearData = Year::where('year', $year)->first();
 
-        return $yearData->toJson();
+        $result = new \stdClass();
+        $result->year = $year;
+        $result->circles = $yearData->circles->toArray();
+        $result->categories = $yearData->categories->toArray();
+
+        return json_encode($result);
     }
 }
