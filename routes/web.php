@@ -14,6 +14,7 @@
 Route::get('/', function () {
     $api = new \App\Http\Controllers\Softwave\ApiController();
     $data = $api->getYearData(env('YEAR_DEFAULT'));
+    $years = $api->getAllYears();
 
-    return view('welcome', compact('data'));
+    return view('welcome', compact(['data', 'years']));
 });

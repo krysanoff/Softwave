@@ -13,15 +13,20 @@ class ApiController extends Controller
      * @param $year
      * @return
      */
-    public function getYearData($year)
+    public function getYearData(int $year)
     {
-        $yearData = Year::where('year', $year)->first();
+        $yearData = Year::getYear($year);
 
-        $result = new \stdClass();
-        $result->year = $year;
-        $result->circles = $yearData->circles->toArray();
-        $result->categories = $yearData->categories->toArray();
+        return $yearData;
+    }
 
-        return json_encode($result);
+    /**
+     * @return string
+     */
+    public function getAllYears()
+    {
+        $years = Year::all();
+
+        return $years->toJson();
     }
 }

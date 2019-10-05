@@ -11,5 +11,6 @@
     </head>
     <body>
         <div data-store="{{ $data }}"></div>
+        <div data-years="{{ $years }}"></div>
     </body>
 </html>

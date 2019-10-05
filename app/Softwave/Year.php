@@ -27,4 +27,20 @@ class Year extends Model
     {
         return $this->hasMany('App\Softwave\Category');
     }
+
+    /**
+     * @param int $year
+     * @return false|string
+     */
+    public static function getYear(int $year)
+    {
+        $yearData = self::where('year', $year)->first();
+
+        $result = new \stdClass();
+        $result->year = $year;
+        $result->circles = $yearData->circles->toArray();
+        $result->categories = $yearData->categories->toArray();
+
+        return json_encode($result);
+    }
 }
