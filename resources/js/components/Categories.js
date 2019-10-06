@@ -15,7 +15,7 @@ export default class Categories extends Component {
 
     render() {
         return (
-            <section>
+            <section className="col-6">
                 <h3>Categories</h3>
                 <ul>
                     {this.renderCategories()}

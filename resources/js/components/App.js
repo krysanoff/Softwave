@@ -9,11 +9,13 @@ export default class App extends Component {
 
     render() {
         return (
-            <div className="container">
+            <div className="fluid-container">
                 {console.log(this.state)}
-                <Categories categories={this.state.categories}/>
-                <Circles circles={this.state.circles}/>
-                <Years/>
+                <div className="row">
+                    <Categories categories={this.state.categories}/>
+                    <Circles circles={this.state.circles}/>
+                    <Years/>
+                </div>
             </div>
         )
     }
