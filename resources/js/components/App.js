@@ -20,9 +20,9 @@ export default class App extends Component {
             <div className="fluid-container">
                 {console.log(this.state)}
                 <div className="row text-center">
+                    <Years/>
                     <Categories categories={this.state.categories}/>
                     <Circles circles={this.state.circles}/>
-                    <Years/>
                 </div>
             </div>
         )

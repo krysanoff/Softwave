@@ -5,9 +5,9 @@ import { COLOR } from "../constants/Colors"
 export default class Categories extends Component {
     renderCategories() {
         return this.props.categories.map((cat, i) =>
-            <li key={"cat_" + i} className="col-6 row my-4">
+            <li key={"cat_" + i} className="col-12 col-lg-6 row my-2 my-lg-4">
                 <div className="col-1 mr-4 text-capitalize">{cat.title}</div>
-                <div className="col-9">
+                <div className="col-9 pr-0">
                     <div className="category__value">
                         {cat.value}
                     </div>
@@ -25,7 +25,7 @@ export default class Categories extends Component {
 
     render() {
         return (
-            <section className="col-6">
+            <section className="col-12 col-md-6">
                 <h3>Categories</h3>
                 <ul className="row list-unstyled">
                     {this.renderCategories()}

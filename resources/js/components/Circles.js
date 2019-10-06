@@ -5,7 +5,7 @@ import {COLOR} from "../constants/Colors";
 export default class Circles extends Component {
     renderCircles() {
         return this.props.circles.map((circle, i) =>
-            <li className="col-6" key={"circle_" + i}>
+            <li className="col-6 col-md-12 col-lg-6 my-md-2" key={"circle_" + i}>
                 <h4>Circle {i + 1}</h4>
                 <div className="position-relative w-100">
                     <div className="circle__value">{circle.value}/100</div>
@@ -27,7 +27,7 @@ export default class Circles extends Component {
     }
     render() {
         return (
-            <section className="col-3">
+            <section className="col-12 col-md-3">
                 <h3>Circles</h3>
                 <ul className="list-unstyled row">
                     {this.renderCircles()}
