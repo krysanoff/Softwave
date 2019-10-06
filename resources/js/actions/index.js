@@ -1,8 +1,8 @@
-import * as action from '../constants/ActionTypes'
-import dispatcher from '../utils/Dispatcher'
+import * as action from "../constants/ActionTypes"
+import dispatcher from "../utils/Dispatcher"
 
 export function getYear(year) {
-    fetch('api/years/' + year)
+    fetch("api/years/" + year)
         .then(response => response.json())
         .then(responseObject => {
             dispatcher.dispatch({
@@ -11,6 +11,6 @@ export function getYear(year) {
             })
         })
         .catch(error => {
-            console.error('YEAR.GET Problem: ' + error.message)
+            console.error("YEAR.GET Problem: " + error.message)
         })
 }

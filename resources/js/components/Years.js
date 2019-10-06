@@ -30,7 +30,6 @@ export default class Years extends Component {
 
     handleYearClick(e, year) {
         e.preventDefault()
-        console.log(year)
         getYear(year)
     }
 }

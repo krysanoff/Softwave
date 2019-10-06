@@ -1,8 +1,8 @@
-import dispatcher from '../utils/Dispatcher'
-import { EventEmitter } from 'events'
-import * as Action from '../constants/ActionTypes'
+import dispatcher from "../utils/Dispatcher"
+import { EventEmitter } from "events"
+import * as Action from "../constants/ActionTypes"
 
-let storeData = JSON.parse(document.getElementById('store').dataset.store)
+let storeData = JSON.parse(document.getElementById("store").dataset.store)
 
 class Store extends EventEmitter {
     getState() {
@@ -14,11 +14,11 @@ class Store extends EventEmitter {
             case Action.YEAR.GET:
                 storeData = action.response
                 console.log(action.response)
-                this.emit('updateState')
+                this.emit("updateState")
                 break
 
             default:
-                console.log('There isn\'t the action type - ' + action.type)
+                console.log("There isn't the action type - " + action.type)
                 break
         }
     }
