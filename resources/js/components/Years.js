@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { getYear } from "../actions";
 
 export default class Years extends Component {
     years = JSON.parse(document.getElementById('years').dataset.years)
@@ -6,7 +7,10 @@ export default class Years extends Component {
     getYears() {
         return this.years.map((item, i) =>
             <li className="my-2" key={"year_" + i}>
-                <a href="#" role="button" className={"btn btn-outline-secondary"} onClick={(e) => this.getYearData(e, item.year)}>
+                <a href="#"
+                   role="button"
+                   className={"btn btn-outline-secondary"}
+                   onClick={(e) => this.handleYearClick(e, item.year)}>
                     {item.year}
                 </a>
             </li>
@@ -24,8 +28,9 @@ export default class Years extends Component {
         )
     }
 
-    getYearData(e, year) {
+    handleYearClick(e, year) {
         e.preventDefault()
         console.log(year)
+        getYear(year)
     }
 }

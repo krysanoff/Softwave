@@ -13,6 +13,7 @@ class Store extends EventEmitter {
         switch(action.type) {
             case Action.YEAR.GET:
                 storeData = action.response
+                console.log(action.response)
                 this.emit('updateState')
                 break
 

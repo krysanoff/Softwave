@@ -2,10 +2,18 @@ import React, { Component } from 'react'
 import Categories from './Categories'
 import Circles from './Circles'
 import Years from './Years'
-import Store from "../store";
+import Store from "../store"
 
 export default class App extends Component {
     state = Store.getState()
+
+    componentDidMount() {
+        Store.on('updateState', this.updateState)
+    }
+
+    updateState = () => {
+        this.setState(Store.getState())
+    }
 
     render() {
         return (
