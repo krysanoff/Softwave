@@ -5,10 +5,11 @@ import { COLOR } from '../constants/Colors'
 export default class Categories extends Component {
     renderCategories() {
         return this.props.categories.map((cat, i) =>
-            <li key={'cat_' + i}>
-                {cat.title}
-                <Line percent={cat.value/cat.maxValue*100} strokeColor={COLOR[i]}/>
-                {console.log(COLOR[i])}
+            <li key={'cat_' + i} className="col-6 row">
+                <div className="col-1 px-1">{cat.title}</div>
+                <div className="col-11">
+                    <Line percent={cat.value/cat.maxValue*100} strokeColor={COLOR[i]}/>
+                </div>
             </li>
         )
     }
@@ -17,7 +18,7 @@ export default class Categories extends Component {
         return (
             <section className="col-6">
                 <h3>Categories</h3>
-                <ul>
+                <ul className="row list-unstyled">
                     {this.renderCategories()}
                 </ul>
             </section>
