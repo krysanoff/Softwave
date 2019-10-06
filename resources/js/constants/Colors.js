@@ -7,5 +7,9 @@ export const COLOR = {
     5: '#18b891',
     6: '#8af257',
     7: '#292fa4',
-    "trail": "#6e6e6e"
+    "trail": "#6e6e6e",
+    "START": {
+        0: "#e1ff01",
+        1: "#127e8d",
+    }
 }

@@ -1,11 +1,11 @@
-import React, { Component } from 'react'
+import React, { Component } from "react"
 import { Line } from "rc-progress"
-import { COLOR } from '../constants/Colors'
+import { COLOR } from "../constants/Colors"
 
 export default class Categories extends Component {
     renderCategories() {
         return this.props.categories.map((cat, i) =>
-            <li key={'cat_' + i} className="col-6 row my-4">
+            <li key={"cat_" + i} className="col-6 row my-4">
                 <div className="col-1 mr-4 text-capitalize">{cat.title}</div>
                 <div className="col-9">
                     <div className="category__value">
