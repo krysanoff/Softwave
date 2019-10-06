@@ -8,9 +8,11 @@ export default class Circles extends Component {
     }
     render() {
         return (
-            <section>
+            <section className="col-3">
                 <h3>Circles</h3>
-                <ul>{this.renderCircles()}</ul>
+                <ul className="list-unstyled">
+                    {this.renderCircles()}
+                </ul>
             </section>
         )
     }

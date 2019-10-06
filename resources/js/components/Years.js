@@ -11,9 +11,12 @@ export default class Years extends Component {
 
     render() {
         return (
-            <ul>
-                {this.getYears()}
-            </ul>
+            <div className="col-3">
+                <h3>Years</h3>
+                <ul className="list-unstyled">
+                    {this.getYears()}
+                </ul>
+            </div>
         )
     }
 }

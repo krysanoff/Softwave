@@ -11,7 +11,7 @@ export default class App extends Component {
         return (
             <div className="fluid-container">
                 {console.log(this.state)}
-                <div className="row">
+                <div className="row text-center">
                     <Categories categories={this.state.categories}/>
                     <Circles circles={this.state.circles}/>
                     <Years/>
